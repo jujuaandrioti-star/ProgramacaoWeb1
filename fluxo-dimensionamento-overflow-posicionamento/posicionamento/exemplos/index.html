@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exemplo de página HTML utilizando tags semânticas">
+    <title>Exemplo de HTML Semântico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#artigos">Artigos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+
+        <section>
+            <header>
+                <h2>Bem-vindo</h2>
+                <p>Esta é a seção principal da página.</p>
+            </header>
+
+            <p>
+                Este exemplo demonstra como estruturar uma página utilizando
+                elementos semânticos do HTML5.
+            </p>
+
+            <figure>
+                <img
+                    src="https://via.placeholder.com/600x300"
+                    alt="Imagem ilustrativa"
+                >
+                <figcaption>Imagem ilustrativa da página.</figcaption>
+            </figure>
+        </section>
+
+        <section id="sobre">
+            <header>
+                <h2>Sobre nós</h2>
+                        </header>
+
+            <article>
+                <h3>Nossa história</h3>
+                <p>
+                    Este é um conteúdo independente dentro da seção sobre.
+                </p>
+            </article>
+
+            <article>
+                <h3>Nossos objetivos</h3>
+                <p>
+                    Trabalhamos para apresentar exemplos de HTML semântico.
+                </p>
+            </article>
+        </section>
+
+        <section id="artigos">
+            <header>
+                <h2>Artigos</h2>
+            </header>
+
+            <article>
+                <header>
+                    <h3>O que é HTML semântico?</h3>
+                    <p>
+                        Publicado em
+                        <time datetime="2026-09-23">23 de setembro de 2026</time>
+                    </p>
+                </header>
+
+                <p>
+                    HTML semântico utiliza elementos que descrevem o significado
+                    e a função do conteúdo.
+                </p>
+
+                <footer>
+                    <p>Autor: João da Silva</p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Estrutura de uma página HTML</h3>
+                </header>
+
+                <p>
+                    Uma página pode ser dividida em cabeçalho, navegação,
+                    conteúdo principal, seções, artigos e rodapé.
+                </p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Informações adicionais</h2>
+            <p>
+                Este conteúdo está relacionado ao conteúdo principal,
+                mas não faz parte diretamente dele.
+            </p>
+        </aside>
+
+        <section>
+            <h2>Exemplo de conteúdo</h2>
+
+            <details>
+                <summary>Mostrar mais informações</summary>
+                <p>
+                    Este conteúdo pode ser expandido ou ocultado pelo usuário.
+                </p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Dados</h2>
+
+            <table>
+                <caption>Exemplo de tabela</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Idade</th>
+                        <th scope="col">Cidade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>João</td>
+                        <td>25</td>
+                        <td>São Paulo</td>
+                    </tr>
+
+                    <tr>
+                        <td>Maria</td>
+                        <td>30</td>
+                        <td>Rio de Janeiro</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total: 2 pessoas</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="contato">
+            <header>
+                <h2>Contato</h2>
+            </header>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Informações pessoais</legend>
+
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="email">E-mail:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="telefone">Telefone:</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                        >
+                    </p>
+
+                    <p>
+                        <label for="assunto">Assunto:</label>
+
+                        <select id="assunto" name="assunto">
+                            <option value="">Selecione</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="mensagem">Mensagem:</label>
+                        <br>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            cols="40"
+                        ></textarea>
+                    </p>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <address>
+            Entre em contato:
+            <a href="mailto:contato@exemplo.com">
+                contato@exemplo.com
+            </a>
+        </address>
+
+        <p>
+            &copy;
+            <time datetime="2026">2026</time>
+            Meu Site. Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
